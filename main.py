@@ -2,9 +2,8 @@ import pandas as pd
 from twilio.rest import Client
 
 # Your Account SID from twilio.com/console
-account_sid = "AC16ef4c8a0dbec65c8b724c6e837e124c"
+account_sid = 
 # Your Auth Token from twilio.com/console
-auth_token  = "58ae28cb8b71d61a93f0491a974eae85"
 client = Client(account_sid, auth_token)
 
 # Passo a passo da solução
@@ -19,8 +18,8 @@ for mes in lista_meses:
          vendas = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000, 'Vendas'].values[0]
          print(f' No mês de mês de {mes}, o Vendedor : {vendedor}, vendeu: R${vendas}, e bateu a meta')
          message = client.messages.create(
-             to="+5511951678649",
-             from_="+15134492362",
+             to="+59
+             from_=42
              body=f' No mês de mês de {mes}, o Vendedor : {vendedor}, vendeu: R${vendas}, e bateu a meta')
 
          print(message.sid)
